@@ -1,0 +1,134 @@
+/**index.wxss**/
+.container{
+	width:100vw;
+	height:100vh;
+}
+.container .inputseach{
+	width:100%;
+	height:100rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	position:relative;
+}
+.inputseach .intput{
+	width:520rpx;
+	height:60rpx;
+	border-radius:60rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	background:rgba(240, 240, 245,0.5);
+	border:1rpx solid rgb(218, 220, 224,1);
+	font-size:28rpx;
+	padding-left:20rpx;
+	padding-right:60rpx;
+}
+.inputseach .cancel{
+	margin-left:20rpx;
+	font-size:30rpx;
+}
+.inputseach .serviceicon{
+	font-size:60rpx;
+	margin-left:20rpx;
+}
+.filliconreeor{
+	position:absolute;
+	font-size:50rpx;
+	right:115rpx;
+}
+.recommend_result{
+	width:100%;
+	height:calc(100% - 100rpx);
+}
+.recommend_result .recommend{
+	width:100%;
+	height:auto;
+}
+.recommend .title{
+	width:100%;
+	height:60rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	
+}
+.recommend .title span{
+	margin-left:40rpx;
+	font-size:25rpx;
+}
+.recommend .recommendbox{
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+	flex-wrap:wrap;
+}
+.recommendbox .recommends{
+	margin-left:50rpx;
+	margin-bottom:20rpx;
+	padding:7rpx 20rpx 10rpx 20rpx;
+	background:rgba(240, 240, 245,0.5);
+	border:1rpx solid rgb(218, 220, 224,1);
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	border-radius:40rpx;
+	font-size:25rpx;
+}
+.result{
+	width:100%;
+	height:100%;
+}
+.seachfood{
+	width:100%;
+	height:150rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.seachfood .foodimg{
+	margin-left:40rpx;
+	width:100rpx;
+	height:100rpx;
+}
+.seachfood .foodimg image{
+	width:100%;
+	height:100%;
+}
+.name_price{
+	margin-left:40rpx;
+	height:100rpx;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:flex-start;
+}
+.name_price .name{
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.name_price .name{
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+.name_price .price .pricelabel{
+	font-size:30rpx;
+	color:rgba(226, 32, 24,1);
+}
+.name_price .price .specification{
+	margin-left:10rpx;
+	font-size:25rpx;
+	color:rgba(226, 32, 24,1);
+}

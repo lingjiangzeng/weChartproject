@@ -1,0 +1,55 @@
+{
+	"pages": [
+		"pages/homepage/homepage",
+		"pages/information/information",
+		"pages/favorite/favorite",
+		"pages/tendency/tendency",
+		"pages/personalcenter/personalcenter",
+		"pages/searchpage/searchpage",
+		"pages/chartpage/chartpage"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTextStyle": "black",
+		"backgroundColor":"#cccccc",
+		"backgroundTextStyle":"dark",
+		"enablePullDownRefresh":true
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"tabBar": {
+		"color":"#272822",
+		"selectedColor":"#1AA034",
+		"list": [
+			{
+				"pagePath": "pages/information/information",
+				"text": "消息",
+				"iconPath": "./allpicture/information.png",
+				"selectedIconPath": "./allpicture/informationactive.png"
+			},
+			{
+				"pagePath": "pages/favorite/favorite",
+				"text": "中意",
+				"iconPath": "./allpicture/favorite.png",
+				"selectedIconPath": "./allpicture/favoriteactive.png"
+			},
+			{
+				"pagePath": "pages/homepage/homepage",
+				"iconPath": "./allpicture/classify.png",
+				"selectedIconPath": "./allpicture/classifyactive.png"
+			},
+			{
+				"pagePath": "pages/tendency/tendency",
+				"text": "动向",
+				"iconPath": "./allpicture/tendency.png",
+				"selectedIconPath": "./allpicture/tendencyactive.png"
+			},
+			{
+				"pagePath": "pages/personalcenter/personalcenter",
+				"text": "我的",              	
+				"iconPath": "./allpicture/my.png",
+				"selectedIconPath": "./allpicture/myactive.png"
+			}
+		]
+	}
+}

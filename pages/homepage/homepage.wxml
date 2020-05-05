@@ -1,0 +1,70 @@
+<view class="container">
+	<view class="seachfood">
+		<view class="seachintputbox" bind:tap="tosearch">
+			<i class='icon-search searchicon'></i>
+			<span class="searchtip">请输入搜索的商品</span>
+		</view>
+
+		<i class='icon-service serviceicon'></i>
+	</view>
+	<view class="allfood">
+		<view class="layer" wx:if="{{showlayer}}" bind:tap="showlayerfun">
+			<view class="layerclassifyforfoodbox" catch:tap="fun">
+				<view class="layertitle_closeicon"><span class="layertitle">全部分类</span><i class="icon-close closeicon" bind:tap="showlayerfun"></i></view>
+				<view class="layertabbox">
+					<view wx:for="{{classifyforfood}}" class="layerfoodtab {{item.active ? 'layerfoodtabactiveactive' : ''}}" id="{{item.id}}"
+					 wx:key="layerfoodtab" bind:tap="tabfun" data-index="{{index}}" data-id="{{item.id}}"><span>{{item.lable}}</span></view>
+				</view>
+			</view>
+
+		</view>
+		<view class="classifyforfoodbox">
+			<scroll-view class="classifyforfood" scroll-x="true" scroll-into-view="{{classifyforfoodid}}" scroll-with-animation='true'>
+				<view class="classifyforfoodtabbox" style="{{classifyforfoodstyle}}">
+					<view wx:for="{{classifyforfood}}" class="classifyforfoodtab {{item.active ? 'classifyforfoodtabactiveactive' : ''}}"
+					 id="{{item.id}}" wx:key="classifyforfoodtab" bind:tap="tabfun" data-index="{{index}}" data-id="{{item.id}}"><span>{{item.lable}}</span></view>
+				</view>
+			</scroll-view>
+			<view class="zhankaiicon" bind:tap="showlayerfun"> <i class="icon-zhankai"></i></view>
+			<view class="bottomline"></view>
+		</view>
+
+		<view class="foodconent">
+			<scroll-view class="lefttab" scroll-y="true" scroll-with-animation='true'>
+				<view wx:for="{{meunfood}}" wx:key="meuntab" class="meuntab {{item.active ? 'meuntabactive' : ''}}" bind:tap="lefttabfun"
+				 data-index="{{index}}" data-id="{{item.id}}" data-name="{{item.lable}}">
+					<span>{{item.lable}}</span>
+				</view>
+			</scroll-view>
+			<scroll-view class='rightconent' scroll-y="true" scroll-with-animation='true'>
+				<view class="foodlistbox" wx:for="{{foodlistdata}}" wx:for-item="items" wx:for-index="indexs" wx:key="foodlistbox">
+					<view class="foodlist">
+						<image src="{{items.imgurl}}" class="foodlistimage"></image>
+						<view class="fooddetail">
+							<view class="foodname"><span>{{items.foodname}}</span></view>
+							<view class="foodpricebox">
+								<view class="foodprice"><span class="price">￥{{items.foodprice}}</span><span class="lable">/斤</span></view>
+								<view class="sizebtn" bind:tap="sizebtnfun" data-index="{{indexs}}" data-id="{{items.id}}"><span>选规格</span></view>
+							</view>
+						</view>
+
+					</view>
+					<view class="specification" wx:if="{{items.showspecification}}">
+						<view class="specificationcontent" wx:for="{{items.specification}}" wx:key="specification">
+							<span class="specificationprice">￥{{item.weight*item.foodprice}} <span class="weight">({{item.weight}}斤)</span></span>
+							<i class="icon-add-fill filliconadd" wx:if="{{item.count<=0}}" data-index="{{index}}" data-indexs="{{indexs}}"
+							 bind:tap="addGood"></i>
+							<view class="foodNumber" wx:if="{{item.count>0}}">
+							<i class="icon-reduce-fill foodNumbericon" data-index="{{index}}" data-indexs="{{indexs}}" bind:tap="minusGood"></i>
+							<span>{{item.count}}</span>
+							<i class="icon-add-fill foodNumbericon" data-index="{{index}}" data-indexs="{{indexs}}" bind:tap="addGood"></i></view>
+							<view class="bottomline"></view>
+						</view>
+
+					</view>
+					<view class="bottomline"></view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+</view>

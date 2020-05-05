@@ -1,0 +1,88 @@
+/**index.wxss**/
+.container {
+	width:100vw;
+	height:100vh;
+}
+.chartList{
+	width:100%;
+	height:100%;
+}
+::-webkit-scrollbar{
+  display:none;
+}
+.uersList{
+	width:100%;
+	height:150rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+ .uersList .userHeaderImg {
+	width:80rpx;
+	height:80rpx;
+	position:relative;
+}
+ .uersList .msgcount{
+	 position:absolute;
+	 top:-12rpx;
+	 right:0rpx;
+	 color:rgba(255,255,255,1);
+	 background:rgba(226, 32, 24,1);
+	 border-radius:50%;
+	 font-size:15rpx;
+	 padding:5rpx 5rpx 5rpx 5rpx ;
+	
+}
+ .uersList .userHeaderImg .img{
+	width:80rpx;
+	height:80rpx;
+}
+
+.uersList .username_msg_time{
+	height:150rpx;
+	margin-left:20rpx;
+	width:calc(100% - 120rpx);
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:flex-start;
+	position:relative;
+}
+.bottomline{
+	position:absolute;
+	bottom:0rpx;
+	width:100%;
+	border-bottom:1px solid rgba(117, 117, 117,0.8);
+	transform:scaleY(0.25);
+	
+}
+.uersList .username_msg_time .username_time{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+.uersList .username_msg_time .username_time .name{
+	line-height:28rpx;
+	font-size:30rpx;
+	font-weight:600;
+}
+.uersList .username_msg_time .username_time .time{
+	margin-right:20rpx;
+	font-size:22rpx;
+	font-weight:500;
+	color:rgba(117, 117, 117,0.8);
+}
+.uersList .username_msg_time .msg{
+	line-height:23rpx;
+	display:block;
+	width:50%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-size:25rpx;
+	font-weight:500;
+	color:rgba(117, 117, 117,0.8);
+}

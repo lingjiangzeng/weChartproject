@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+	<scroll-view class="chartWindow" style="{{chartWindowStyle}}" scroll-y="{{true}}" scroll-with-animation='{{true}}' enable-back-to-top="{{true}}" scroll-into-view="{{scrollIntoView}}">
+	   <view  id="{{items.msgId}}"class="{{items.sendermsg == 'sender' ? 'msgcontentsender' :'msgcontentreceiver'}} {{indexs == usermsg.chartcontent.length-1 ? 'allMsgbottom' :''}}"  wx:for="{{usermsg.chartcontent}}" wx:for-item="items" wx:for-index="indexs" wx:key="msgcontent">
+		   <view class="time"><span>{{items.msgTime}}</span></view>
+		   <view class="uerheadder_msg">
+			   <view class="header"><image src="{{items.senderImg}}"></image></view>
+			   <view wx:if="{{items.msgType == 1}}" class="msgtext"><span>{{items.msgContent}}</span></view>
+			   <view wx:if="{{items.msgType == 2}}" class="msgimage"><image src="{{items.msgContent}}"></image></view>
+		   </view>
+	   </view>
+		
+	</scroll-view>
+	<view class="intputmsgbox">
+		<view class="topline"></view>
+		<i class="icon-add addicon" bind:tap="addPictruefun"></i>
+		<textarea  class="textareabox" type="text" value="{{inputmsg}}" type="text" focus="{{true}}" auto-height="{{true}}" show-confirm-bar="{{false}}"
+		 cursor-spacing="{{15}}" adjust-position="{{true}}" hold-keyboard="{{true}}" placeholder-style="font-size:30rpx;" bind:linechange="rowChangfun" bind:input="changVlauefun"></textarea>
+		 <view class="sendBtn" bind:tap="sendfun"><span>发送</span></view>
+		 
+	</view>
+</view>

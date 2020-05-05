@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+	<scroll-view class="goodList" scroll-y="true" scroll-with-animation='true'>
+		<view class="list" wx:for="{{goodData}}" wx:for-item="items" wx:for-index="indexs" wx:key="list">
+			<view class="checkedbtn {{items.choiced? 'checkedbtnactive' : ''}}" data-id="{{items.id}}">
+				<i class="icon-success-fill" wx:if="{{items.choiced}}"></i>
+			</view>
+			<view class="foodcontent">
+				<view class="foodcontentimage">
+					<image src="{{items.imgurl}}"></image>
+				</view>
+				<view class="foodcontentname">
+					<view class="name"><span>{{items.foodname}}</span></view>
+					<view class="pricebox">
+						<view class="price">
+							<span class="number">{{items.foodprice}}</span>
+							<span class="jin">/斤</span>
+						</view>
+						<view class="sizebtn">
+							<i class="icon-reduce-fill foodNumbericon" data-id="{{items.id}}" bind:tap="minusGood"></i>
+							<span>{{items.count}}</span>
+							<i class="icon-add-fill foodNumbericon" data-id="{{items.id}}" bind:tap="addGood"></i>
+						</view>
+					</view>
+					
+				</view>
+				<view class="bottomline"></view> 
+			</view>
+		</view>
+		
+	</scroll-view>
+	<view class="paybox">
+		<view class="topline"></view>
+		<view class="choicebox" bind:tap="choiceboxfun">
+			<view class="choiceicon {{!ifchoiceicon ? '':'choiceiconactive'}}">
+				<i class="icon-success-fill" wx:if="{{ifchoiceicon}}"></i>
+			</view>
+			<view class="choicelabel">
+				<span>全选</span>
+			</view>
+		</view>
+		<view class="sumbox">
+			<view class="summeony">
+				<span>合计:108元</span>
+			</view>
+			<view class="paybtn">
+				<span>结算</span>
+			</view>
+		</view>
+	</view>
+</view>

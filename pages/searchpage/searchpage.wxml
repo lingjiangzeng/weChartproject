@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+		<view class="inputseach">
+			<input type="text" placeholder=" 请输入搜索的商品" class='intput' focus="{{true}}" hold-keyboard="{{true}}" value="{{seachvalue}}" placeholder-style="font-size:25rpx;color:rgb(218, 220, 224,1);" bind:input="seachvaluefun"></input>
+			<i class='icon-search serviceicon' bind:tap="searchaffirmfun" wx:if="{{searchbtn}}"></i>
+			<i  class="icon-close serviceicon" wx:if="{{!searchbtn}}" bind:tap="searchcolsefun"></i>
+			<i class="icon-reeor-fill filliconreeor" wx:if="{{seachvalue!=''}}" bind:tap="clearseachvaluefun"></i>
+		</view>
+		<view class="recommend_result">
+			<view class="recommend" wx:if="{{!searchaffirm}}">
+				<view class="title"><span>猜你想搜</span></view>
+				<view class="recommendbox">
+					<view class="recommends" wx:for="{{recommendData}}"  wx:key="recommends" bind:tap="searchlabelfun" data-label="{{item.label}}"><span>{{item.label}}</span></view>
+				</view>
+			</view>
+			<scroll-view class="result"  scroll-y="true" scroll-with-animation='true' wx:if="{{searchaffirm}}">
+				<view class="seachfood" wx:for="{{foodlistdata}}" wx:key="seachfood">
+					<view class="foodimg"><image src="{{item.imgurl}}"></image></view>
+					<view class="name_price">
+						<view class="name"><span>{{item.foodname}}</span></view>
+						<view class="price"><span class="pricelabel">￥{{item.foodprice}}</span><span class="specification">/斤</span></view>
+					</view>
+				</view>
+				
+			</scroll-view>
+			
+		</view>
+</view>

@@ -1,0 +1,206 @@
+/**index.wxss**/
+.container {
+	width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+}
+.goodList{
+	width:100%;
+	height:calc(100% - 80rpx);
+}
+::-webkit-scrollbar{
+  display:none;
+}
+.paybox{
+	width:100%;
+	height:100rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	position:relative;
+}
+.paybox .choicebox{
+	height:100%;
+	display:flex;
+	flex-direction:row;
+	justify-content:flex-start;
+	align-items:center;
+}
+ .paybox .topline{
+	width:100%;
+	border-bottom:1rpx solid rgba(117, 117, 117,0.8);
+	transform:scaleY(0.3);
+	position:absolute;
+	top:0rpx;
+}
+.choicebox .choiceicon{
+	margin-left:30rpx;
+	width:35rpx;
+	height:35rpx;
+	border:1rpx solid rgba(35, 176, 34,1);
+	border-radius:50%;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+.choiceiconactive{
+	border:1rpx solid rgba(255, 255, 255,1) !important;
+}
+.choicebox .choiceicon i{
+	font-size:50rpx;
+	color:rgba(35, 176, 34,1);
+}
+.choicebox .choicelabel{
+	margin-left:20rpx;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+}
+.choicebox .choicelabel span{
+	font-size:30rpx;
+	line-height:30rpx;
+}
+ .paybox .sumbox{
+	 margin-right:40rpx;
+	 display:flex;
+	 flex-direction:row;
+	 justify-content:center;
+	 align-items:center;
+ }
+ .paybox .sumbox .summeony{
+	 margin-right:30rpx;
+	 font-size:30rpx;
+	 font-weight:700;
+	 color:rgba(232, 47, 40,1)
+ }
+ .paybox .sumbox .paybtn{
+	 width:100rpx;
+	 height:60rpx;
+	 display:flex;
+	 flex-direction:row;
+	 justify-content:center;
+	 align-items:center;
+	 background:rgba(215, 97, 104,1);
+	 
+ }
+ .paybox .sumbox .paybtn span{
+	 color:rgba(255,255,255,1);
+	 font-size:30rpx;
+	 font-weight:700;
+	 line-height:30rpx;
+ 
+ }
+ /* 购物车列表*/
+ .list{
+	 width:100%;
+	 height:150rpx;
+	 display:flex;
+	 flex-direction:row;
+	 justify-content:flex-start;
+	 align-items:center;
+	 position:relative;
+ }
+
+ .list .checkedbtn{
+	 margin-left:20rpx;
+	 width:35rpx;
+	 height:35rpx;
+	 display:flex;
+	 flex-direction:row;
+	 justify-content:center;
+	 align-items:center;
+	 border-radius:50%;
+	 border:1rpx solid rgba(35, 176, 34,1);
+ }
+ .checkedbtnactive{
+	 border:1rpx solid rgba(255, 255, 255,1) !important;
+ }
+ .list .checkedbtn i{
+	 font-size:50rpx;
+	 color:rgba(35, 176, 34,1);
+ }
+  .list .foodcontent{
+	  margin-left:20rpx;
+	  height:100%;
+	  width:calc(100% - 75rpx);
+	  display:flex;
+	  flex-direction:row;
+	  justify-content:flex-start;
+	  align-items:center;
+	  
+  }
+  .list .foodcontent .bottomline{
+	 width:100%;
+	 position:absolute;
+	 bottom:0rpx;
+	 border-bottom:1rpx solid rgba(117, 117, 117,0.8);
+	 transform:scaleY(0.25);
+ }
+  
+ .list .foodcontent .foodcontentimage{
+	   width:100rpx;
+	   height:100rpx;
+ }
+ .list .foodcontent .foodcontentimage image{
+ 	   width:100rpx;
+ 	   height:100rpx;
+ }
+ .list .foodcontent .foodcontentname{
+	   margin-left:20rpx;
+	   height:100rpx;
+	   width:calc(100% - 120rpx);
+	   display:flex;
+	   flex-direction:column;
+	   justify-content:space-between;
+	   align-items:flex-start;
+ }
+  .list .foodcontent .foodcontentname .pricebox{
+	  display:flex;
+	  flex-direction:row;
+	  justify-content:space-between;
+	  align-items:center;
+	  width:100%;
+	 
+ }
+ .list .foodcontent .foodcontentname .pricebox .name{
+ 	   font-size:30rpx;
+	   font-weight:700;
+ }
+ .list .foodcontent .foodcontentname .pricebox .price {
+  	  display:flex;
+  	  flex-direction:row;
+  	  justify-content:flex-start;
+  	  align-items:center;
+  }
+.list .foodcontent .foodcontentname .pricebox .price .number{
+ 	   font-size:25rpx;
+ 	   color:rgba(232, 47, 40,1);
+ }
+ .list .foodcontent .foodcontentname .pricebox .price .jin{
+	   margin-left:10rpx;
+ 	   font-size:20rpx;
+ 	   color:rgba(232, 47, 40,1);
+ }
+ .pricebox .sizebtn{
+	 display:flex;
+	 flex-direction:row;
+	 justify-content:space-between;
+	 align-items:center;
+	 margin-right:35rpx;
+ }
+ .pricebox .sizebtn .foodNumbericon{
+	  color:rgba(35, 176, 34,1);
+	  font-size:45rpx;
+ }
+ .pricebox .sizebtn span{
+ 	 margin-left:15rpx;
+	 margin-right:15rpx;
+ }
+ 

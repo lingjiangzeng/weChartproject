@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+	<scroll-view class="chartList" scroll-y="true" scroll-with-animation='true'>
+		<view class='uersList' wx:for="{{userList}}" wx:for-item="items" wx:for-index="indexs" wx:key="uersList" bind:tap="ToChartPage">
+			<view class="userHeaderImg">
+				<view wx:if="{{items.msgcount != 0}}" class="msgcount"><span>{{items.msgcount}}</span></view>
+				<image src="{{items.userHeardImg}}" class="img"></image>
+			</view>
+			<view class="username_msg_time">
+				<view class="topline" wx:if="{{indexs != 0}}"></view>
+				<view class="username_time"><span class="name">{{items.name}}</span><span class="time">{{items.time}}</span></view>
+				<view class="msg"><span>{{items.msg}}</span></view>
+				<view class="bottomline"></view>
+			</view>
+
+		</view>
+
+	</scroll-view>
+</view>

@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" scroll-with-animation='true' class="mian">
+	<view class="container">
+		<view class="userInfo">
+			<view class="userMsg">
+				<image src="{{usrinfo.avatarUrl}}"></image>
+				<span>{{usrinfo.nickName}}</span>
+			</view>
+			<view class="userBenefit">
+				<view class="userBenefitlabel" wx:for="{{userBenefit}}" wx:key="userBenefitlabel">
+					<span>{{item.userBenefits}}</span>
+					<span>{{item.label}}</span>
+				</view>
+			</view>
+		</view>
+		<view class="myOrder">
+			<view class="title"><span>我的订单</span>
+			<view class="bottomline"></view>
+			</view>
+			<view class="orderMeun">
+				<view class="meun" wx:for="{{myOrder}}" wx:key="meun"><i class="{{item.icon}} icons"></i><span>{{item.label}}</span></view>
+			</view>
+		</view>
+		<view class="myTool">
+			<view class="title"><span>我的工具</span>
+			<view class="bottomline"></view>
+			</view>
+			<view class="toolMeun">
+				<view class="meun" wx:for="{{myTool}}" wx:key="meun"><i class="{{item.icon}} icons"></i><span>{{item.label}}</span></view>
+			</view>
+		</view>
+		<view class="myhele">
+			<view class="title"><span>帮助中心</span>
+			<view class="bottomline"></view>
+			</view>
+			<view class="helpMeun">
+				<view class="meun" wx:for="{{myhele}}" wx:key="meun"><i class="{{item.icon}} icons"></i><span>{{item.label}}</span></view>
+			</view>
+		</view>
+	</view>	
+</scroll-view>
+
